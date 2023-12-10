@@ -327,10 +327,10 @@ if( !class_exists( 'FontFlow_WP_Plugin_Elementor_Feather_Icons' ) ) {
                 'name'          => 'fontflow-feathericons',
                 'label'         => esc_html__( 'FontFlow - FeatherIcons', 'fontflow' ),
                 'labelIcon'     => 'fas fa-chevron-right',
-                'ver'           => FCIFE_CONST_VERSION,
+                'ver'           => esc_attr( FCIFE_CONST_VERSION ),
                 'prefix'        => 'fontflow-feathericons-',
                 'displayPrefix' => 'fontflow-feathericons',
-                'url'           => FCIFE_CONST_URL . 'assets/css/feathericons/fontflow-feathericons.min.css',
+                'url'           => esc_url( FCIFE_CONST_URL . 'assets/css/feathericons/fontflow-feathericons.min.css' ),
                 'enqueue'       => [ FCIFE_CONST_URL . 'assets/css/feathericons/fontflow-feathericons.min.css' ],
                 'icons'         => $icons
             ];

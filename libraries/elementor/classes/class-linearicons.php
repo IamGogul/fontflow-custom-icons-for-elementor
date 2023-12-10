@@ -215,10 +215,10 @@ if( !class_exists( 'FontFlow_WP_Plugin_Elementor_Linear_Icons' ) ) {
                 'name'          => 'fontflow-linearicons',
                 'label'         => esc_html__( 'FontFlow - LinearIcons', 'fontflow' ),
                 'labelIcon'     => 'fas fa-chevron-right',
-                'ver'           => FCIFE_CONST_VERSION,
+                'ver'           => esc_attr( FCIFE_CONST_VERSION ),
                 'prefix'        => 'fontflow-linearicons-',
                 'displayPrefix' => 'fontflow-linearicons',
-                'url'           => FCIFE_CONST_URL . 'assets/css/linearicons/fontflow-linearicons.min.css',
+                'url'           => esc_url( FCIFE_CONST_URL . 'assets/css/linearicons/fontflow-linearicons.min.css' ),
                 'enqueue'       => [ FCIFE_CONST_URL . 'assets/css/linearicons/fontflow-linearicons.min.css' ],
                 'icons'         => $icons
             ];

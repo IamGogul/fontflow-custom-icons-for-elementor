@@ -38,7 +38,7 @@ if( !class_exists( 'FontFlow_WP_Plugin_Admin' ) ) {
                 return;
 			}
 
-			add_filter( 'plugin_action_links_fontflow-custom-icons-for-elementor/fontflow-custom-icons-for-elementor.php', array( $this, 'plugin_action_links' ), 10, 2 );
+			add_filter( 'plugin_action_links_fontflow-custom-icons-for-elementor/fontflow-custom-icons-for-elementor.php', [ $this, 'plugin_action_links' ], 10, 2 );
 
         }
 

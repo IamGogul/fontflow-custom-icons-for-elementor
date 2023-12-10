@@ -45,7 +45,7 @@ if( ! class_exists( 'FontFlow_WP_Plugin_Welcome_Screen' ) ) {
                     </div>
 
                     <div class="e-a-list">
-                        <?php echo $this->render_icons_list(); ?>
+                        <?php $this->render_icons_list(); ?>
                     </div>
                 </div>
             <?php

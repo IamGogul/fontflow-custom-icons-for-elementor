@@ -1589,10 +1589,10 @@ if( !class_exists( 'FontFlow_WP_Plugin_Elementor_Line_Icons' ) ) {
                 'name'          => 'fontflow-lineicons',
                 'label'         => esc_html__( 'FontFlow - LineIcons', 'fontflow' ),
                 'labelIcon'     => 'fas fa-chevron-right',
-                'ver'           => FCIFE_CONST_VERSION,
+                'ver'           => esc_attr( FCIFE_CONST_VERSION ),
                 'prefix'        => 'fontflow-lineicons-',
                 'displayPrefix' => 'fontflow-lineicons',
-                'url'           => FCIFE_CONST_URL . 'assets/css/lineicons/fontflow-lineicons.min.css',
+                'url'           => esc_url( FCIFE_CONST_URL . 'assets/css/lineicons/fontflow-lineicons.min.css' ),
                 'enqueue'       => [ FCIFE_CONST_URL . 'assets/css/lineicons/fontflow-lineicons.min.css' ],
                 'icons'         => $icons
             ];

@@ -237,10 +237,10 @@ if( !class_exists( 'FontFlow_WP_Plugin_Elementor_Dev_Icons' ) ) {
                 'name'          => 'fontflow-devicons',
                 'label'         => esc_html__( 'FontFlow - DevIcons', 'fontflow' ),
                 'labelIcon'     => 'fas fa-chevron-right',
-                'ver'           => FCIFE_CONST_VERSION,
+                'ver'           => esc_attr( FCIFE_CONST_VERSION ),
                 'prefix'        => 'fontflow-devicons-',
                 'displayPrefix' => 'fontflow-devicons',
-                'url'           => FCIFE_CONST_URL . 'assets/css/devicons/fontflow-devicons.min.css',
+                'url'           => esc_url( FCIFE_CONST_URL . 'assets/css/devicons/fontflow-devicons.min.css' ),
                 'enqueue'       => [ FCIFE_CONST_URL . 'assets/css/devicons/fontflow-devicons.min.css' ],
                 'icons'         => $icons
             ];

@@ -77,7 +77,7 @@ if( !class_exists( 'FontFlow_WP_Plugin_Settings' ) ) {
         }
 
         public function update_settings() {
-            $key = $_POST['key'];
+            $key = sanitize_text_field( $_POST['key'] );
 
             if( !empty( $key ) ) {
                 $setting = get_option( $key, false );

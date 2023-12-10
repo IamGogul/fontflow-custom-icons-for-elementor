@@ -405,10 +405,10 @@ if( !class_exists( 'FontFlow_WP_Plugin_Elementor_Elegant_Icons' ) ) {
                 'name'          => 'fontflow-eleganticons',
                 'label'         => esc_html__( 'FontFlow - ElegantIcons', 'fontflow' ),
                 'labelIcon'     => 'fas fa-chevron-right',
-                'ver'           => FCIFE_CONST_VERSION,
+                'ver'           => esc_attr( FCIFE_CONST_VERSION ),
                 'prefix'        => 'fontflow-eleganticons-',
                 'displayPrefix' => 'fontflow-eleganticons',
-                'url'           => FCIFE_CONST_URL . 'assets/css/eleganticons/fontflow-eleganticons.min.css',
+                'url'           => esc_url( FCIFE_CONST_URL . 'assets/css/eleganticons/fontflow-eleganticons.min.css' ),
                 'enqueue'       => [ FCIFE_CONST_URL . 'assets/css/eleganticons/fontflow-eleganticons.min.css' ],
                 'icons'         => $icons
             ];

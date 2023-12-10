@@ -77,7 +77,7 @@ if( !class_exists( 'FontFlow_WP_Plugin' ) ) {
 		 * Define plugin required constants
 		 */
 		private function define_constants() {
-			$this->define( 'FCIFE_CONST_SERVER_SOFTWARE', $_SERVER['SERVER_SOFTWARE'] );
+			$this->define( 'FCIFE_CONST_SERVER_SOFTWARE', sanitize_text_field( $_SERVER['SERVER_SOFTWARE'] ) );
             $this->define( 'FCIFE_CONST_FILE', __FILE__ );
 
 			if( ! function_exists('get_plugin_data') ){
@@ -85,9 +85,9 @@ if( !class_exists( 'FontFlow_WP_Plugin' ) ) {
 			}
 
 			$plugin_data = get_plugin_data( FCIFE_CONST_FILE );
-            $this->define( 'FCIFE_CONST_PLUGIN_NAME', $plugin_data['Name'] );
+            $this->define( 'FCIFE_CONST_PLUGIN_NAME', sanitize_text_field( $plugin_data['Name'] ) );
             $this->define( 'FCIFE_CONST_SAN_PLUGIN_NAME', sanitize_title( $plugin_data['Name'] ) );
-            $this->define( 'FCIFE_CONST_VERSION', $plugin_data['Version'] );
+            $this->define( 'FCIFE_CONST_VERSION', sanitize_text_field( $plugin_data['Version'] ) );
             $this->define( 'FCIFE_CONST_DIR', trailingslashit( plugin_dir_path( FCIFE_CONST_FILE ) ) );
 			$this->define( 'FCIFE_CONST_URL', trailingslashit( plugin_dir_url( FCIFE_CONST_FILE ) ) );
 			$this->define( 'FCIFE_CONST_BASENAME', plugin_basename( FCIFE_CONST_FILE ) );
@@ -143,14 +143,11 @@ if( !class_exists( 'FontFlow_WP_Plugin' ) ) {
 			}
 
 			if( !is_plugin_active( 'elementor/elementor.php' ) ) {
-                if ( isset( $_GET['activate'] ) ) {
-                    unset( $_GET['activate'] );
-                }
 
 				add_action( 'admin_notices', function() {
                     /* translators: %s: html tags */
                     $message = sprintf(
-                        __( 'The %1$s FontFlow Custom Icons for Elementor %2$s plugin is compatible with %1$sElementor%2$s plugin. Kindly install and activate it.', 'fontflow' ),
+                        esc_html__( 'The %1$s FontFlow Custom Icons for Elementor %2$s plugin is compatible with %1$sElementor%2$s plugin. Kindly install and activate it.', 'fontflow' ),
                         '<strong>',
                         '</strong>'
                     );
@@ -186,7 +183,11 @@ if( !class_exists( 'FontFlow_WP_Plugin' ) ) {
                         );
 					}
 
-					printf( '<div class="notice notice-info is-dismissible"> <p> %1$s </p> <p> %2$s </p> </div>', $message, $button );
+					printf(
+						'<div class="notice notice-info is-dismissible"> <p> %1$s </p> <p> %2$s </p> </div>',
+						wp_kses_post( $message ), /* sanitized & filtered var $message  */
+						wp_kses_post( $button ), /* sanitized & filtered var $button */
+					);
 
 				});
 
