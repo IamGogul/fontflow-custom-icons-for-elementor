@@ -47,17 +47,22 @@ if( !class_exists( 'FontFlow_WP_Plugin_Settings' ) ) {
         }
 
         public function load_assets( $hook ) {
-            wp_localize_script( 'jquery', 'FCIFE_OBJ', [
-                'pluginName'    => FCIFE_CONST_PLUGIN_NAME,
-                'pluginVersion' => FCIFE_CONST_VERSION,
-                'ajax'          => esc_url( admin_url('admin-ajax.php') ),
-            ]);
 
             if( 'elementor_page_fontflow' === $hook ) {
-                wp_enqueue_script( 'fontflow-admin', FCIFE_CONST_URL . 'assets/js/admin.min.js', [ 'jquery' ] );
-            }
 
-            wp_enqueue_style( 'fontflow-admin', FCIFE_CONST_URL . 'assets/css/admin.min.css', false, FCIFE_CONST_VERSION );
+                wp_localize_script( 'jquery', 'FCIFE_OBJ', [
+                    'pluginName'       => FCIFE_CONST_PLUGIN_NAME,
+                    'pluginVersion'    => FCIFE_CONST_VERSION,
+                    'settingNonceName' => FCIFE_CONST_SAN_PLUGIN_NAME,
+                    'error'            => esc_html__( 'something went wrong.', 'fontflow' ),
+                    'settingNonceVal'  => wp_create_nonce( FCIFE_CONST_SAN_PLUGIN_NAME ),
+                    'ajax'             => esc_url( admin_url('admin-ajax.php') ),
+                ]);
+
+                wp_enqueue_script( 'fontflow-admin', FCIFE_CONST_URL . 'assets/js/admin.min.js', [ 'jquery' ] );
+                wp_enqueue_style( 'fontflow-admin', FCIFE_CONST_URL . 'assets/css/admin.min.css', false, FCIFE_CONST_VERSION );
+
+            }
         }
 
         public function admin_menus() {
@@ -77,6 +82,9 @@ if( !class_exists( 'FontFlow_WP_Plugin_Settings' ) ) {
         }
 
         public function update_settings() {
+            $nonce_name = sanitize_text_field( $_POST['nonceName'] );
+
+            check_ajax_referer( $nonce_name, 'nonce' );
             $key = sanitize_text_field( $_POST['key'] );
 
             if( !empty( $key ) ) {

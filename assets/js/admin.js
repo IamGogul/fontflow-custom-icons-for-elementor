@@ -20,6 +20,8 @@ var FCIFE_OBJ = FCIFE_OBJ || {};
                     $formData.push(
                         { name:'action', value: 'fontflow-action/plugin/settings/update' },
                         { name:'key', value: $this.data("db") },
+                        { name:'nonceName', value: FCIFE_OBJ.settingNonceName },
+                        { name:'nonce', value: FCIFE_OBJ.settingNonceVal },
                     );
 
                     $.ajax({
@@ -32,7 +34,11 @@ var FCIFE_OBJ = FCIFE_OBJ || {};
                         },
                         success   : function ( $res ) {
                             setTimeout(function(){ $this.html( $res.data.btn ) }, 1000);
-                        }
+                        },
+                        error     : function(){
+                            alert( FCIFE_OBJ.error );
+                            window.location.reload();
+                        },
                     });
                 });
             }
