@@ -67,10 +67,6 @@ if( !class_exists( 'FontFlow_WP_Plugin_Elementor' ) ) {
 					'key'  => 'fontflow_lineicons',
 					'file' => FCIFE_CONST_DIR . 'libraries/elementor/classes/class-lineicons.php'
 				],
-				[
-					'key'  => 'fontflow_themifyicons',
-					'file' => FCIFE_CONST_DIR . 'libraries/elementor/classes/class-themifyicons.php'
-				],
 			];
 
 

@@ -112,16 +112,6 @@ if( ! class_exists( 'FontFlow_WP_Plugin_Welcome_Screen' ) ) {
                     'action_url'     => 'javascript:void(0);',
                     'image'          => $images_url . 'Icons8.svg',
                 ],
-                [
-                    'name'           => 'Themify',
-                    'author'         => 'Themify',
-                    'author_url'     => 'https://themify.me/themify-icons',
-                    'description'    => esc_html__( 'Themify Icons is a complete set of icons for use in web design and apps, consisting of 320+ pixel-perfect, hand-crafted icons that draw inspiration from Apple iOS 7.', 'fontflow' ),
-                    'learn_more_url' => 'https://themify.me/themify-icons',
-                    'db_option'      => 'fontflow_themifyicons',
-                    'action_url'     => 'javascript:void(0);',
-                    'image'          => $images_url . 'themify.svg',
-                ],
             ];
 
             return $icons_list;

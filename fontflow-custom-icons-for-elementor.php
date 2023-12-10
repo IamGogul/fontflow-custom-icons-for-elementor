@@ -112,6 +112,13 @@ if( !class_exists( 'FontFlow_WP_Plugin' ) ) {
             }
 
 			/**
+			 * The class responsible for defining all actions that occur in the admin area.
+			 */
+			if( is_admin() ) {
+				require_once FCIFE_CONST_DIR . 'libraries/admin/class-admin.php';
+			}
+
+			/**
              * Include internationalization functionality of the plugin.
              */
 			require_once FCIFE_CONST_DIR . 'libraries/i18n/class-i18n.php';
