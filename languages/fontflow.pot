@@ -1,0 +1,138 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2023-10-02 20:06+0530\n"
+"PO-Revision-Date: 2023-10-02 20:07+0530\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;esc_html;esc_html__;esc_attr;esc_attr__;"
+"esc_attr_e;esc_html_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: fontflow-custom-icons-for-elementor.php:146
+#, php-format
+msgid ""
+"The %1$s FontFlow Custom Icons for Elementor %2$s plugin is compatible with "
+"%1$sElementor%2$s plugin. Kindly install and activate it."
+msgstr ""
+
+#: fontflow-custom-icons-for-elementor.php:166
+msgid "Activate Elementor"
+msgstr ""
+
+#: fontflow-custom-icons-for-elementor.php:178
+msgid "Install Elementor"
+msgstr ""
+
+#: libraries/elementor/classes/class-devicons.php:238
+msgid "FontFlow - DevIcons"
+msgstr ""
+
+#: libraries/elementor/classes/class-eleganticons.php:406
+msgid "FontFlow - ElegantIcons"
+msgstr ""
+
+#: libraries/elementor/classes/class-feathericons.php:328
+msgid "FontFlow - FeatherIcons"
+msgstr ""
+
+#: libraries/elementor/classes/class-linearicons.php:216
+msgid "FontFlow - LinearIcons"
+msgstr ""
+
+#: libraries/elementor/classes/class-lineicons.php:1590
+msgid "FontFlow - LineIcons"
+msgstr ""
+
+#: libraries/elementor/classes/class-themifyicons.php:397
+msgid "FontFlow - ThemifyIcons"
+msgstr ""
+
+#: libraries/settings/class-settings-api.php:66
+#: libraries/settings/class-settings-api.php:67
+msgid "🎖️ FontFlow"
+msgstr ""
+
+#: libraries/settings/class-settings-api.php:88
+#: libraries/settings/class-welcome-screen.php:151
+msgid "Disable"
+msgstr ""
+
+#: libraries/settings/class-settings-api.php:93
+#: libraries/settings/class-welcome-screen.php:153
+msgid "Enable"
+msgstr ""
+
+#: libraries/settings/class-settings-api.php:98
+msgid "something went wrong."
+msgstr ""
+
+#: libraries/settings/class-welcome-screen.php:39
+msgid "FontFlow Custom Icons Library for Elementor."
+msgstr ""
+
+#: libraries/settings/class-welcome-screen.php:41
+msgid ""
+"Elevate your Elementor website with FontFlow Custom Icons, a dynamic plugin "
+"that seamlessly integrates an extensive icon library."
+msgstr ""
+
+#: libraries/settings/class-welcome-screen.php:43
+msgid "Learn more about this plugin."
+msgstr ""
+
+#: libraries/settings/class-welcome-screen.php:69
+msgid ""
+"Devicons is a full statck iconic font made for developers, code jedis, "
+"ninjas, HTTPsters, evangelists and nerds."
+msgstr ""
+
+#: libraries/settings/class-welcome-screen.php:79
+msgid ""
+"The Elegant Icon Font – 360 Of The Best Free Icons For The Modern Web. They "
+"are vector based and can expand and contract without quality degradation. "
+"The result is crisp, beautiful graphics on any display (including Retina "
+"displays)."
+msgstr ""
+
+#: libraries/settings/class-welcome-screen.php:89
+msgid ""
+"Feather is a collection of simply beautiful open-source icons. Each icon is "
+"designed on a 24x24 grid with an emphasis on simplicity, consistency, and "
+"flexibility."
+msgstr ""
+
+#: libraries/settings/class-welcome-screen.php:99
+msgid ""
+"The Linearicons icon pack includes a font that you can install and use in "
+"any application with a custom text tool.This font comes with hundreds of "
+"ligatures, making it easy to find and use the icons."
+msgstr ""
+
+#: libraries/settings/class-welcome-screen.php:109
+msgid ""
+"Line Awesome consists of ~1380 flat line icons that offer complete coverage "
+"of the main Font Awesome icon set. This icon-font is based off of the Icons8 "
+"Windows 10 style, which consists of over 4,000 icons."
+msgstr ""
+
+#: libraries/settings/class-welcome-screen.php:119
+msgid ""
+"Themify Icons is a complete set of icons for use in web design and apps, "
+"consisting of 320+ pixel-perfect, hand-crafted icons that draw inspiration "
+"from Apple iOS 7."
+msgstr ""
+
+#: libraries/settings/class-welcome-screen.php:137
+msgid "By"
+msgstr ""
+
+#: libraries/settings/class-welcome-screen.php:143
+msgid "Learn More"
+msgstr ""
