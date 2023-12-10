@@ -18,7 +18,6 @@ Elevate your Elementor website with FontFlow Custom Icons, a dynamic plugin that
 🎖️[FeatherIcons](https://feathericons.com/)
 🎖️[LinearIcons](https://linearicons.com/free)
 🎖️[LineIcons](https://icons8.com/line-awesome)
-🎖️[ThemifyIcons](https://themify.me/themify-icons)
 
 = How to install FontFlow Plugin =
 1.Login to Your WordPress Dashboard
