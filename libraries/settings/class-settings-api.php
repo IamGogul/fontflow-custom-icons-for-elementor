@@ -82,29 +82,37 @@ if( !class_exists( 'FontFlow_WP_Plugin_Settings' ) ) {
         }
 
         public function update_settings() {
-            $nonce_name = sanitize_text_field( $_POST['nonceName'] );
 
-            check_ajax_referer( $nonce_name, 'nonce' );
-            $key = sanitize_text_field( $_POST['key'] );
+            /**
+             * current user has the specified capability to manage options able to update the settings
+             */
+            if( current_user_can( 'manage_options' ) ) {
 
-            if( !empty( $key ) ) {
-                $setting = get_option( $key, false );
+                $nonce_name = sanitize_text_field( $_POST['nonceName'] );
 
-                if( !$setting ) {
-                    update_option( $key, true );
-                    wp_send_json_success([
-                        'btn' => esc_html__('Disable', 'fontflow'),
-                    ]);
+                check_ajax_referer( $nonce_name, 'nonce' );
+                $key = sanitize_text_field( $_POST['key'] );
+
+                if( !empty( $key ) ) {
+                    $setting = get_option( $key, false );
+
+                    if( !$setting ) {
+                        update_option( $key, true );
+                        wp_send_json_success([
+                            'btn' => esc_html__('Disable', 'fontflow'),
+                        ]);
+                    } else {
+                        update_option( $key, false );
+                        wp_send_json_success([
+                            'btn' => esc_html__('Enable', 'fontflow'),
+                        ]);
+                    }
                 } else {
-                    update_option( $key, false );
-                    wp_send_json_success([
-                        'btn' => esc_html__('Enable', 'fontflow'),
+                    wp_send_json_error([
+                        'btn' => esc_html__('something went wrong.', 'fontflow'),
                     ]);
                 }
-            } else {
-                wp_send_json_error([
-                    'btn' => esc_html__('something went wrong.', 'fontflow'),
-                ]);
+
             }
 
             wp_die();
